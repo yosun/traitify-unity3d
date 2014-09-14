@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Traitify : MonoBehaviour {
 
-	public static string APIKEY_public="n4ld6egdmjioi18k1r4jseposu";
-	public static string APIKEY_secret="747ke3eeprtq6pu2via2gt9c2d";
+	public static string APIKEY_public="[public key]";
+	public static string APIKEY_secret="[secret key]";
 	public static string APIURL_base = "api-sandbox.traitify.com/";
 	public static string APIURL_version = "v1/";
 
@@ -73,7 +73,7 @@ public class Traitify : MonoBehaviour {
 	}
 
 	public void SendSlideResponse(string assessmentid,string slideid,string response,string timetaken){
-		string url = "http://labs.yosun.me/thirdparty/traitify/put.hack.php?assessmentid="+assessmentid+"&slideid="+slideid+"&timetaken="+timetaken+"&response="+response;// GenURLBase("assessments") + "/" + assessmentid + "/slides/"+slideid;
+		string url = "http://[address of your webserver.com]/put.hack.php?assessmentid="+assessmentid+"&slideid="+slideid+"&timetaken="+timetaken+"&response="+response;// GenURLBase("assessments") + "/" + assessmentid + "/slides/"+slideid;
 		StartCoroutine(wwwget.FetchData(url,SlideResponseCallback));
 	}
 
